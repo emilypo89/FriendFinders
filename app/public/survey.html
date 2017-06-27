@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Survey</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-globe"></span>Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">Take the Survey to get paired with a new friend!</h2>
+      <h4 class="text-center">On a scale of 1 to 5 with 5 being the agree and 1 being disagree, how much do you believe these statements apply to you.</h4>
+      <h4 class="text-center">After you are done, click submit and you will see your new friend!</h4>
+      <br>
+      
+      <div class="text-center">
+        <a href="/reserve"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> </button></a>
+        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><span class="glyphicon glyphicon-search"></span>Survey Questions</h2>
+        </div>
+        <div class="panel-body" id="questions">
+        <form>
+          <div class="form-group">
+            <label for="name">Name (Required)</label>
+            <input type="name" class="form-control" id="name_input" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="imageLink">Link to a Photo Image (Required)</label>
+            <input type="imageLink" class="form-control" id="imageLink_input" placeholder="Link to a Photo Image">
+          </div>
+          <h4>Questions 1</h4>
+          <p>Being mean to people is fun.</p>
+          <select class="form-control" id="question1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 2</h4>
+          <p>You are happier when spending time with a large group of people.</p>
+          <select class="form-control" id="question2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 3</h4>
+          <p>You enjoy solving puzzles.</p>
+          <select class="form-control" id="question3">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 4</h4>
+          <p>You prefer to spend time by yourself.</p>
+          <select class="form-control" id="question4">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 5</h4>
+          <p>You are respectful of others beliefs.</p>
+          <select class="form-control" id="question5">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 6</h4>
+          <p>You are an overachiever.</p>
+          <select class="form-control" id="question6">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 7</h4>
+          <p>You enjoy being the center of attention.</p>
+          <select class="form-control" id="question7">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 8</h4>
+          <p>You worry about what people think of you.</p>
+          <select class="form-control" id="question8">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 9</h4>
+          <p>You enjoy doing something creative.</p>
+          <select class="form-control" id="question9">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <h4>Questions 10</h4>
+          <p>You enjoy being active.</p>
+          <select class="form-control" id="question10">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <br>
+          <button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-check"></span>Submit</button>
+         </form> 
+        </div>
+      </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p>Friend Finder</p>
+    <p><a href="#" id="clear">API Friend List</a> | <a href="https://github.com/emilypo89/FriendFinders">GitHub Repo</a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
