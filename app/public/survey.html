@@ -130,7 +130,7 @@
             <option>5</option>
           </select>
           <br>
-          <button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-check"></span>Submit</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"><span class="glyphicon glyphicon-check"></span>Submit</button>
          </form> 
         </div>
       </div>
@@ -147,3 +147,48 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Here grab the form elements
+      var newFriend = {
+        name: $("#name_input").val().trim(),
+        photo: $("#imageLink_input").val().trim(),
+        scores: [$("#question1").val().trim(), $("#question2").val().trim(), $("#question3").val().trim(), $("#question4").val().trim(), $("#question5").val().trim(), $("#question6").val().trim(), $("#question7").val().trim(), $("#question8").val().trim(), $("#question9").val().trim(), $("#question10").val().trim()]
+      };
+
+      console.log(newFriend);
+
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+
+      $.post("/api/friends", newFriend,
+        function(data) {
+
+          // // If a table is available... tell user they are booked.
+          // if (data) {
+          //   alert("Yay! You are officially booked!");
+          // }
+
+          // // If a table is available... tell user they on the waiting list.
+          // else {
+          //   alert("Sorry you are on the wait list");
+          // }
+
+          // Clear the form when submitting
+          $("#name_input").val("");
+          $("#imageLink_input").val("");
+          $(".form-control").val("");
+
+        });
+
+    });
+
+</script>
