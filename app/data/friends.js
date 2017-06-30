@@ -17,7 +17,7 @@ var friends = [
   },
   {
     name:"Leslie",
-    photo:"http://vignette3.wikia.nocookie.net/parksandrecreation/images/3/38/Leslie.png/revision/latest?cb=20111015205925https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png",
+    photo:"http://vignette3.wikia.nocookie.net/parksandrecreation/images/3/38/Leslie.png/revision/latest?cb=20111015205925",
     scores:[
         1,
         5,
@@ -33,7 +33,7 @@ var friends = [
   },
   {
     name:"Liz",
-    photo:"http://vignette3.wikia.nocookie.net/parksandrecreation/images/3/38/Leslie.png/revision/latest?cb=20111015205925https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png",
+    photo:"https://cdn.pastemagazine.com/www/blogs/lists/lizlemonthumbs.jpg",
     scores:[
         3,
         1,

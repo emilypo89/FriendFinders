@@ -130,8 +130,28 @@
             <option>5</option>
           </select>
           <br>
-          <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"><span class="glyphicon glyphicon-check"></span>Submit</button>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="submit"><span class="glyphicon glyphicon-check"></span>Submit</button>
          </form> 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Your New Friend is:</h4>
+        </div>
+        <div class="modal-body">
+          <p id="modalText"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
         </div>
       </div>
   </div>
@@ -154,7 +174,6 @@
 
     $("#submit").on("click", function(event) {
       event.preventDefault();
-
       // Here grab the form elements
       var newFriend = {
         name: $("#name_input").val().trim(),
@@ -171,23 +190,43 @@
 
       $.post("/api/friends", newFriend,
         function(data) {
-
-          // // If a table is available... tell user they are booked.
-          // if (data) {
-          //   alert("Yay! You are officially booked!");
-          // }
-
-          // // If a table is available... tell user they on the waiting list.
-          // else {
-          //   alert("Sorry you are on the wait list");
-          // }
-
-          // Clear the form when submitting
           $("#name_input").val("");
           $("#imageLink_input").val("");
           $(".form-control").val("");
+          $("#modalText").html("");
 
         });
+      // Here we get the location of the root page.
+        // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+        var currentURL = window.location.origin;
+
+        // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+        $.ajax({url: currentURL + "/api/match", method: "GET"})
+            .done(function(matchData) {
+
+                // Here we are logging the URL so we have access to it for troubleshooting
+                console.log("------------------------------------");
+                console.log("URL: " + currentURL + "/api/friends");
+                console.log("------------------------------------");
+
+                // Here we then log the Data to console, where it will show up as an object.
+                console.log("matchData: " + matchData);
+                console.log(matchData[0].name);
+                console.log("------------------------------------");
+
+             // var tableSection = $("<div>");
+             //    tableSection.addClass('well');
+             //    tableSection.attr('id', 'tableWell-' + i+1)
+             //    $('#tableSection').append(tableSection);
+
+             //    var tableNumber = i + 1;
+
+
+                // Then display the remaining fields in the HTML (Section Name, Date, URL)
+                $("#modalText").html("<h2>" + matchData[0].name + "\n</h2>" + "<img src=" + matchData[0].photo + ">");
+
+             
+            });
 
     });
 
