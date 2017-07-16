@@ -1,0 +1,27 @@
+body{
+	background: #505160;
+}
+
+span {
+	color: white;
+}
+.jumbotron {
+	background: #AEBD38;
+	color: white;
+}
+
+#panelHeading {
+	background: #68829E;
+	color: white;
+}
+
+#homeButton,
+#submit {
+ 	background: #598234;
+ 	border: solid 1px #598234;
+ 	color: white;
+}
+
+#questions {
+	color: #505160;
+}
