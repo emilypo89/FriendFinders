@@ -8,7 +8,7 @@ This is an application that allows the user to fill out a survey that will match
 
 After the user clicks the button to take the survey, they are taken to the survey page where they need to add their name and a photo of themselves. They are then supposed to anwser the 10 questions, matching how much the agree with the statement (with 5 being extremely agree and 1 being extremely disagree).
 
-![friends](./app/public/assets/img/friendFinderSurvey.png) 
+![friends](./app/public/img/friendFinderSurvey.png) 
 
 When the user is finished filling out the survey they are to hit submit. When the user hits submit a modal come up with their new friend match!
 
