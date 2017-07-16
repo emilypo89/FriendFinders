@@ -2,7 +2,7 @@
 
 This is an application that allows the user to fill out a survey that will match them with a new friend. The user is matched with someone who has also taken the survey and has answered the questions similarily to them. 
 
-![friends](./app/public/assets/img/friendFinderHome.png) 
+![friends](./app/public/img/friendFinderHome.png) 
 
 ## Using the Application
 
@@ -12,7 +12,7 @@ After the user clicks the button to take the survey, they are taken to the surve
 
 When the user is finished filling out the survey they are to hit submit. When the user hits submit a modal come up with their new friend match!
 
-![friends](./app/public/assets/img/friendFinderMatch.png) 
+![friends](./app/public/img/friendFinderMatch.png) 
 
 
 ## Matching Process
@@ -23,7 +23,7 @@ Once those scores are subtracted they are added together into a total difference
 
 All of the existing friends in the application are stored in a JSON and are pulling into the front end of the application using AJAX calls.
 
-![friends](./app/public/assets/img/friendsAPI.png) 
+![friends](./app/public/img/friendsAPI.png) 
 
 For full demonstration of application see video in app/public/img folder.
 
