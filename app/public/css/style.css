@@ -1,5 +1,6 @@
 body{
 	background: #505160;
+	font-family: 'Patrick Hand SC', cursive;
 }
 
 span {
@@ -8,11 +9,16 @@ span {
 .jumbotron {
 	background: #AEBD38;
 	color: white;
+
 }
 
 #panelHeading {
 	background: #68829E;
 	color: white;
+}
+
+.panel-title {
+	font-size: 30px;
 }
 
 #homeButton,
@@ -24,4 +30,14 @@ span {
 
 #questions {
 	color: #505160;
+	font-size: 25px;
+}
+
+#userMatch {
+	text-align: center;
+}
+
+#userMatchImage {
+	max-width: 450px;
+	padding-left: 60px;
 }
